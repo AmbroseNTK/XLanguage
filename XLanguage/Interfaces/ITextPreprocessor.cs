@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XLanguage
+namespace XLanguage.Interfaces
 {
-    public class Class1
+    public interface ITextPreprocessor
     {
+        string Process(string rawText);
     }
 }
