@@ -4,28 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 using XLanguage;
 
 namespace XLanguage.Test
 {
  
-    [TestClass]
+    [TestFixture]
     public class PreprocessorTest
     {
         XLanguage.Preprocessor.StringPreprocessor stringPreprocessor;
         XLanguage.Preprocessor.NumberPreprocessor numberPreprocessor;
         
 
-        [TestInitialize]
+        [SetUp]
         public void Setup()
         {
             stringPreprocessor = new Preprocessor.StringPreprocessor();
             numberPreprocessor = new Preprocessor.NumberPreprocessor();
         }
 
-        [TestMethod]
+        [Test]
         public void GetStringFromCode()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -36,7 +36,7 @@ namespace XLanguage.Test
             
         }
 
-        [TestMethod]
+        [Test]
         public void GetNumberFromCode()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -44,7 +44,7 @@ namespace XLanguage.Test
             Assert.AreEqual(nth + nth + nth + nth + nth + nth + num + num + num + num + num + nth + num,
                 numberPreprocessor.Process("a b c 5-3.5+2"));
         }
-        [TestMethod]
+        [Test]
         public void DoNotGetNumberInString()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -55,7 +55,7 @@ namespace XLanguage.Test
                 numberPreprocessor.Process(nth + nth + str + str + str + str + str + nth + nth + nth + nth + nth + nth + nth, "a \"2+3\" 4+3.14"));
 
         }
-        [TestMethod]
+        [Test]
         public void GetStringComponent()
         {
             stringPreprocessor = new Preprocessor.StringPreprocessor();

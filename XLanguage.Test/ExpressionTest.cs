@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace XLanguage.Test
 {
-    [TestClass]
+    [TestFixture]
     public class ExpressionTest
     {
-        [TestInitialize]
+        [SetUp]
         public void Setup()
         {
 
         }
-        [TestMethod]
+        [Test]
         public void GenerateExpressionMap()
         {
             string nth = XLanguage.Preprocessor.TagCat.NTH;
@@ -26,7 +26,7 @@ namespace XLanguage.Test
 
             Assert.AreEqual(nth + nth + nth + nth + nth + num + num + num + nth + str + str + str + str + str + nth + nth + nth + nth, expression.Map);
         }
-        [TestMethod]
+        [Test]
         public void ExtractExpressionComponents()
         {
             Expression expression = new Expression("2+3 - 5  \"Hello\" +7 /2");
