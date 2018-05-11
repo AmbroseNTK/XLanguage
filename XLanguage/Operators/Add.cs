@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XLanguage
+namespace XLanguage.Operators
 {
-    public class Calculator
+    class Add
     {
-        private string raw;
-        
     }
 }

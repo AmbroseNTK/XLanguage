@@ -40,8 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="ExpressionComponent.cs" />
     <Compile Include="Interfaces\ITextPreprocessor.cs" />
+    <Compile Include="Operands\NumberOperand.cs" />
+    <Compile Include="Operands\StringOperand.cs" />
+    <Compile Include="Operators\Add.cs" />
+    <Compile Include="Preprocessor\NumberPreprocessor.cs" />
     <Compile Include="Preprocessor\StringPreprocessor.cs" />
     <Compile Include="Preprocessor\TagCat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

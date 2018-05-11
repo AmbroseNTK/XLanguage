@@ -10,6 +10,14 @@ namespace XLanguage.Preprocessor
 {
     public class StringPreprocessor : ITextPreprocessor
     {
+        private SortedDictionary<float,ExpressionComponent> components;
+
+        public StringPreprocessor()
+        {
+            Components = new SortedDictionary<float,ExpressionComponent>();
+        }
+
+        public SortedDictionary<float,ExpressionComponent> Components { get => components; set => components = value; }
         public string Process(string rawText)
         {
             string result = ""; //"w 1 \"Hello\" ( )"
@@ -18,12 +26,18 @@ namespace XLanguage.Preprocessor
             {
                 if (rawText[i] == '"')
                 {
+                    if (i > 0 && rawText[i - 1] == '\\')
+                    {
+                        result += Preprocessor.TagCat.STRING;
+                        continue;
+                    }
                     if (anchor == -1)
                     {
                         anchor = i;
                     }
                     else
                     {
+                        components.Add(anchor, new Operands.StringOperand(rawText.Substring(anchor + 1, i - anchor - 1), i - anchor - 1, anchor));
                         anchor = -1;
                     }
                     result += Preprocessor.TagCat.STRING;
@@ -41,6 +55,11 @@ namespace XLanguage.Preprocessor
                 }
             }
             return result;
+        }
+
+        public string Process(string beforeResult, string rawText)
+        {
+            return Process(rawText);
         }
     }
 }

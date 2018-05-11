@@ -9,5 +9,6 @@ namespace XLanguage.Interfaces
     public interface ITextPreprocessor
     {
         string Process(string rawText);
+        string Process(string beforeResult, string rawText);
     }
 }
