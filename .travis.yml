@@ -1,4 +1,4 @@
-language: cshape
+language: csharp
 solution: XLanguage.sln
 install:
 – nuget restore XLanguage.sln
