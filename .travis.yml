@@ -1,8 +1,8 @@
 language: csharp
 solution: XLanguage.sln
 install:
-– nuget restore XLanguage.sln
-– nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget restore XLanguage.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-– xbuild /p:Configuration=Release XLanguage.sln
-– mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./XLanguage.Test/bin/Release/XLanguage.Test.dll
+  - xbuild /p:Configuration=Release XLanguage.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./XLanguage.Tests/bin/Release/XLanguage.Tests.dll
