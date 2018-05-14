@@ -191,9 +191,8 @@ article h4 {
 /* Custom Navbar
    ------------------------------------------------------- */
 .navbar-inverse {
-  background-color: #318f7c;
   opacity: 0.95;
-  border-color: #02735f;
+  background: linear-gradient(90deg, #24C6DC, #514A9D);
 }
 .navbar-inverse .navbar-brand {
   color: #ffffff;

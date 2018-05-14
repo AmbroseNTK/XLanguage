@@ -4,5 +4,5 @@ install:
   - nuget restore XLanguage.sln
   - sudo apt-get install nunit-console
 script:
-  - msbuild /p:Configuration=Release XLanguage.sln
-  - nunit-console ./XLanguage.Test/bin/Release/XLanguage.Test.dll
+  - xbuild /p:Configuration=Release XLanguage.sln
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit-console.exe ./XLanguage.Test/bin/Release/XLanguage.Test.dll
