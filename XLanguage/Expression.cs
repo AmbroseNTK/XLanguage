@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace XLanguage
 {
+    /// <summary>
+    /// Expression
+    /// </summary>
     public class Expression
     {
+        /// <summary>
+        /// Raw text of expression
+        /// </summary>
         private string raw;
+        /// <summary>
+        /// A map of expression component
+        /// </summary>
         private string map;
+        /// <summary>
+        /// Expression components list
+        /// </summary>
         private SortedDictionary<float, ExpressionComponent> components;
 
         public Expression()
@@ -34,6 +46,9 @@ namespace XLanguage
         public string Map { get => map; }
         public SortedDictionary<float, ExpressionComponent> Components { get => components; }
 
+        /// <summary>
+        /// Preprocessing raw text to expression components
+        /// </summary>
         public void Preprocessing()
         {
             Preprocessor.StringPreprocessor stringPreprocessor = new Preprocessor.StringPreprocessor();

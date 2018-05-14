@@ -3,10 +3,6 @@
   <section guid="feacbce2-8290-4d90-bb05-373b9d7dbbfc">
     <item key="ConfigFileName" value="XLanguageDoc" />
     <item key="ProjectName" value="XLanguage" />
-    <item key="ProjectUrl" value="https://github.com/AmbroseNTK/XLanguage" />
-    <item key="Author" value="Ambrose Nguyen Tuan Kiet" />
-    <item key="AuthorUrl" value="www.facebook.com/AmbroseNTK" />
-    <item key="VersionNumber" value="1.0" />
     <InputFile>
       <Relative>..\xlanguage\xlanguage.csproj</Relative>
       <Full>D:\Source\Repos\XLanguage\XLanguage\XLanguage.csproj</Full>
@@ -26,7 +22,7 @@
     <item key="Theme" value="sharpDox" />
     <item key="ShowCode" value="True" />
     <item key="PrimaryColor" value="#F5F4F0" />
-    <item key="SecondaryColor" value="#1E90FF" />
+    <item key="SecondaryColor" value="#F58026" />
     <item key="DisableSequenceDiagrams" value="False" />
   </section>
 </SDConfig>
