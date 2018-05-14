@@ -12,8 +12,8 @@
       <Full>D:\Source\Repos\XLanguage\XLanguage\XLanguage.csproj</Full>
     </InputFile>
     <OutputPath>
-      <Relative>..\xlanguage\docs</Relative>
-      <Full>D:\Source\Repos\XLanguage\XLanguage\docs</Full>
+      <Relative>..\docs</Relative>
+      <Full>D:\Source\Repos\XLanguage\docs</Full>
     </OutputPath>
     <item key="DocLanguage" value="en" />
     <item key="ExcludePrivate" value="False" />
