@@ -25,7 +25,7 @@ namespace XLanguage.Test
             numberPreprocessor = new Preprocessor.NumberPreprocessor();
         }
 
-        [Test]
+        [TestCase]
         public void GetStringFromCode()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -36,7 +36,7 @@ namespace XLanguage.Test
             
         }
 
-        [Test]
+        [TestCase]
         public void GetNumberFromCode()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -44,7 +44,7 @@ namespace XLanguage.Test
             Assert.AreEqual(nth + nth + nth + nth + nth + nth + num + num + num + num + num + nth + num,
                 numberPreprocessor.Process("a b c 5-3.5+2"));
         }
-        [Test]
+        [TestCase]
         public void DoNotGetNumberInString()
         {
             string nth = Preprocessor.TagCat.NTH;
@@ -55,7 +55,7 @@ namespace XLanguage.Test
                 numberPreprocessor.Process(nth + nth + str + str + str + str + str + nth + nth + nth + nth + nth + nth + nth, "a \"2+3\" 4+3.14"));
 
         }
-        [Test]
+        [TestCase]
         public void GetStringComponent()
         {
             stringPreprocessor = new Preprocessor.StringPreprocessor();

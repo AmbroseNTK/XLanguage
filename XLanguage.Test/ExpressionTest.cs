@@ -16,7 +16,7 @@ namespace XLanguage.Test
         {
 
         }
-        [Test]
+        [TestCase]
         public void GenerateExpressionMap()
         {
             string nth = XLanguage.Preprocessor.TagCat.NTH;
@@ -26,7 +26,7 @@ namespace XLanguage.Test
 
             Assert.AreEqual(nth + nth + nth + nth + nth + num + num + num + nth + str + str + str + str + str + nth + nth + nth + nth, expression.Map);
         }
-        [Test]
+        [TestCase]
         public void ExtractExpressionComponents()
         {
             Expression expression = new Expression("2+3 - 5  \"Hello\" +7 /2");
