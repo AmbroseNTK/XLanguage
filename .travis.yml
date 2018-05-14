@@ -2,7 +2,7 @@ language: csharp
 solution: XLanguage.sln
 install:
   - nuget restore XLanguage.sln
-  - nuget install NUnit.Runners -Version 3.8.0 -OutputDirectory testrunner
+  - sudo apt-get install nunit-console
 script:
   - msbuild /p:Configuration=Release XLanguage.sln
-  - mono ./testrunner/NUnit.Runners.3.8.0/tools/nunit-console.exe ./XLanguage.Test/bin/Release/XLanguage.Test.dll
+  - nunit-console ./XLanguage.Test/bin/Release/XLanguage.Test.dll
